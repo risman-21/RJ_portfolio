@@ -1,0 +1,367 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: white;
+}
+
+.container{
+    margin: 0px 5rem;
+}
+/* header start */
+
+header{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 1.2rem;
+    text-align: center;
+
+}
+
+nav ul .logo{
+    flex-grow: 1;
+    margin: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    text-align: start;
+}
+
+nav ul .logo >img{
+    height: 100%;
+    border-radius: 50%;
+}
+nav ul>li{
+    margin: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    background: inherit;
+}
+
+nav ul li a{
+    display: relative;
+    
+}
+nav ul li a:hover::before{
+    width: 4rem;
+    transition: all linear 0.2s;
+    text-align: center;
+}
+
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    width: 0rem;
+    height: 5px;
+    background: yellow;
+    border-radius: 20px;
+}
+
+/* header ends */
+
+
+/* home start */
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.hero-bg{
+    height: 500px;
+    width: 500px;
+}
+
+.home img{
+   height: inherit;
+   width: inherit;
+   border-radius: 5rem;
+}
+
+.hero-content {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content__about{
+    text-align: justify;
+    padding: 2rem;
+}
+.hero-icons ul li{
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    margin: .5rem;
+}
+
+.hero-icons ul li img:hover{
+    height: 35px;
+    width: 35px;
+    transition: all linear 0.3s;
+}
+
+/* home end */
+
+/* education start */
+.education {
+    background-color: white;
+    margin-top: 10rem;
+    padding: 0 50px;
+    justify-content: space-around;
+}
+
+.education .hero-bg{
+    background-color: white;
+    margin-top: 20px;
+}
+
+.education .hero-content{
+    background: white;
+    color: black;
+    padding: 20px;
+}
+
+.education .hero-content table tr, td{
+    background: whitesmoke;
+    padding: 20px;
+    color: black;
+}
+.education .hero-content table tr:hover td{
+    background: rgb(41, 4, 4);
+    padding: 20px;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    transition: all linear 0.2s;
+}
+.education .hero-content table th{
+    background: rgb(53, 51, 51);
+    padding: 20px;
+    color: white;
+    border: 1px solid white;
+}
+/* education end */
+
+
+/* project start */
+.projects{
+    padding: 5rem 2rem;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.projects-collage{
+    height: 600px;
+    width: 600px;
+}
+
+.projects-collage_img{
+    display: flex;
+    flex-wrap: wrap;
+}
+.projects-collage_img-box{
+    height: 180px;
+    width: 180px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.projects-collage_img-box img{
+    height: inherit;
+    width: inherit;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.projects-collage_img-box::before{
+    content: '';
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    background: rgb(145, 145, 142);
+    border: 2px solid black;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.projects-collage_img-box:hover::before {
+    opacity: 0.5; 
+
+}
+
+.projects-content{
+    margin-top: 30px;
+}
+
+.projects-content table{
+    margin-bottom: 30px;
+}
+
+.projects-content table td>a{
+    color: black;
+}
+.projects-content table tr:hover td>a{
+   color: white;
+   font-weight: bold;
+    transition: all linear 0.2s;
+}
+.projects-content  table tr, td {
+    background: whitesmoke;
+    padding: 20px;
+    color: black;
+}
+.projects-content table tr:hover td{
+    background: rgb(41, 4, 4);
+    padding: 20px;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    transition: all linear 0.2s;
+}
+.projects-content table th{
+    background: rgb(53, 51, 51);
+    padding: 20px;
+    color: white;
+    border: 1px solid white;
+}
+/* project end */
+
+
+/* experience start */
+
+    .experience{
+        display: flex;
+        padding: 50px 20px;
+         background:#fff;
+         gap: 20px;
+         justify-content: center;
+    }
+.experience-card{
+    width: 500px;
+    background: #f1efef;
+    box-shadow: 10px 20px 30px 5px rgb(46, 40, 40);
+    border-radius: 20px;
+    padding: 2rem;
+      font-weight: bold;
+}
+
+.experience-card_title h1{
+    text-align: center;
+    background: #f1efef;
+    color: black;  
+}
+
+.experience-card_content span{
+    background: #f1efef;
+    display:block;
+    text-align: end;
+    font-size: 8px;
+    color: black;
+}
+
+.experience-card_content p{
+    background: #f1efef;
+    color: black;
+    text-align: justify;
+    padding: 1rem;
+}
+
+.experience-card_footer{
+    height: 200px;
+    width: 100%;
+    background: #f1efef;
+}
+
+.experience-card_footer img{
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    background: #f1efef;
+    border-radius: 20px;
+}
+/* experience end */
+
+
+/* footer start */
+
+.contact{
+    background: #000;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 50px 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-form_design form{
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-form_design label, input,textarea{
+    padding: 10px;
+    background: none;
+    color: black;
+    border-radius: 15px;
+}
+.contact-form_design textarea{
+        padding: 50px;
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: rgb(61, 171, 208);
+    font-weight: bold;
+}
+
+.contact-info .hero-icons ul{
+    background: white;
+}
+.contact-info .hero-icons ul li{
+    background: white;
+}
+
+/* footer end */
+
+
